@@ -1,0 +1,13 @@
+# Available Tools
+
+## tikoji_kelaz
+
+Parameters:
+- summary (required): Put your COMPLETE response here in Markdown format (supports tables, code blocks, lists)
+- reason (optional)
+
+ALWAYS call tikoji_kelaz at the end of EVERY response.
+
+## Format
+
+{"tool": "tikoji_kelaz", "arguments": {"summary": "Your full Markdown response here"}}
