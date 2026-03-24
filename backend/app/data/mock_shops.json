@@ -1,0 +1,592 @@
+[
+  {
+    "id": "shop_001",
+    "name": "老张黄焖鸡",
+    "rating": 4.6,
+    "distance": 800,
+    "delivery_fee": 3,
+    "min_order": 20,
+    "delivery_time": "30-40分钟",
+    "tags": ["快餐", "米饭", "鸡肉"],
+    "products": [
+      {
+        "id": "p001",
+        "shop_id": "shop_001",
+        "name": "黄焖鸡米饭(大份)",
+        "price": 22,
+        "description": "鸡腿肉搭配土豆、青椒，酱香浓郁，配米饭",
+        "image_url": "/mock-images/hmj.jpg",
+        "category": "主食",
+        "monthly_sales": 356
+      },
+      {
+        "id": "p002",
+        "shop_id": "shop_001",
+        "name": "黄焖鸡米饭(小份)",
+        "price": 16,
+        "description": "鸡腿肉搭配土豆、青椒，酱香浓郁，配米饭",
+        "image_url": "/mock-images/hmj_s.jpg",
+        "category": "主食",
+        "monthly_sales": 210
+      },
+      {
+        "id": "p003",
+        "shop_id": "shop_001",
+        "name": "黄焖排骨米饭",
+        "price": 25,
+        "description": "猪排骨炖土豆，酱香味浓，配白米饭",
+        "image_url": "/mock-images/hmpg.jpg",
+        "category": "主食",
+        "monthly_sales": 128
+      },
+      {
+        "id": "p004",
+        "shop_id": "shop_001",
+        "name": "可乐",
+        "price": 5,
+        "description": "冰镇可口可乐330ml",
+        "image_url": "/mock-images/cola.jpg",
+        "category": "饮料",
+        "monthly_sales": 450
+      }
+    ],
+    "reviews": [
+      {"id": "r001", "shop_id": "shop_001", "rating": 5, "content": "份量很大，鸡肉很嫩，推荐！", "tags": ["份量大", "味道好"]},
+      {"id": "r002", "shop_id": "shop_001", "rating": 4, "content": "味道不错，就是有点咸", "tags": ["味道好"]},
+      {"id": "r003", "shop_id": "shop_001", "rating": 5, "content": "经常点他家，鸡肉多，性价比高", "tags": ["性价比高", "份量大"]}
+    ]
+  },
+  {
+    "id": "shop_002",
+    "name": "川味麻辣烫",
+    "rating": 4.3,
+    "distance": 1200,
+    "delivery_fee": 4,
+    "min_order": 18,
+    "delivery_time": "35-45分钟",
+    "tags": ["麻辣烫", "川菜", "辣"],
+    "products": [
+      {
+        "id": "p005",
+        "shop_id": "shop_002",
+        "name": "麻辣烫(中份)",
+        "price": 20,
+        "description": "自选蔬菜肉类，麻辣汤底，含粉丝",
+        "image_url": "/mock-images/mlt.jpg",
+        "category": "主食",
+        "monthly_sales": 520
+      },
+      {
+        "id": "p006",
+        "shop_id": "shop_002",
+        "name": "麻辣烫(大份)",
+        "price": 28,
+        "description": "自选蔬菜肉类，麻辣汤底，含粉丝，加量版",
+        "image_url": "/mock-images/mlt_l.jpg",
+        "category": "主食",
+        "monthly_sales": 380
+      },
+      {
+        "id": "p007",
+        "shop_id": "shop_002",
+        "name": "酸辣粉",
+        "price": 15,
+        "description": "红薯粉条，酸辣汤底，配花生碎和香菜",
+        "image_url": "/mock-images/slf.jpg",
+        "category": "主食",
+        "monthly_sales": 290
+      },
+      {
+        "id": "p008",
+        "shop_id": "shop_002",
+        "name": "冒菜(中份)",
+        "price": 22,
+        "description": "蔬菜豆制品肉类混合，麻辣鲜香",
+        "image_url": "/mock-images/mc.jpg",
+        "category": "主食",
+        "monthly_sales": 180
+      }
+    ],
+    "reviews": [
+      {"id": "r004", "shop_id": "shop_002", "rating": 4, "content": "辣度正好，蔬菜很新鲜", "tags": ["味道好", "食材新鲜"]},
+      {"id": "r005", "shop_id": "shop_002", "rating": 5, "content": "份量足，汤底很香，经常回购", "tags": ["份量大", "味道好"]},
+      {"id": "r006", "shop_id": "shop_002", "rating": 3, "content": "送的有点慢，味道还行", "tags": ["配送慢"]}
+    ]
+  },
+  {
+    "id": "shop_003",
+    "name": "绿野轻食沙拉",
+    "rating": 4.7,
+    "distance": 600,
+    "delivery_fee": 5,
+    "min_order": 25,
+    "delivery_time": "25-35分钟",
+    "tags": ["轻食", "沙拉", "健康"],
+    "products": [
+      {
+        "id": "p009",
+        "shop_id": "shop_003",
+        "name": "鸡胸肉蔬菜沙拉",
+        "price": 28,
+        "description": "低脂鸡胸肉、生菜、番茄、玉米、鸡蛋，配油醋汁",
+        "image_url": "/mock-images/salad_chicken.jpg",
+        "category": "主食",
+        "monthly_sales": 430
+      },
+      {
+        "id": "p010",
+        "shop_id": "shop_003",
+        "name": "牛肉藜麦碗",
+        "price": 35,
+        "description": "低脂牛肉、藜麦、西兰花、胡萝卜、牛油果",
+        "image_url": "/mock-images/beef_bowl.jpg",
+        "category": "主食",
+        "monthly_sales": 320
+      },
+      {
+        "id": "p011",
+        "shop_id": "shop_003",
+        "name": "三文鱼牛油果沙拉",
+        "price": 38,
+        "description": "挪威三文鱼、牛油果、混合生菜、樱桃番茄",
+        "image_url": "/mock-images/salmon_salad.jpg",
+        "category": "主食",
+        "monthly_sales": 210
+      },
+      {
+        "id": "p012",
+        "shop_id": "shop_003",
+        "name": "全麦鸡肉卷",
+        "price": 22,
+        "description": "全麦饼皮包裹鸡胸肉、生菜、番茄、低脂酱",
+        "image_url": "/mock-images/wrap.jpg",
+        "category": "主食",
+        "monthly_sales": 280
+      },
+      {
+        "id": "p013",
+        "shop_id": "shop_003",
+        "name": "鲜榨果蔬汁",
+        "price": 12,
+        "description": "苹果+胡萝卜+芹菜鲜榨果蔬汁",
+        "image_url": "/mock-images/juice.jpg",
+        "category": "饮料",
+        "monthly_sales": 190
+      }
+    ],
+    "reviews": [
+      {"id": "r007", "shop_id": "shop_003", "rating": 5, "content": "食材很新鲜，鸡胸肉不柴，减脂期必备", "tags": ["食材新鲜", "健康"]},
+      {"id": "r008", "shop_id": "shop_003", "rating": 4, "content": "味道清淡，沙拉酱好吃，就是有点贵", "tags": ["味道好", "价格偏高"]},
+      {"id": "r009", "shop_id": "shop_003", "rating": 5, "content": "包装很好，沙拉没有串味，满意", "tags": ["包装好"]}
+    ]
+  },
+  {
+    "id": "shop_004",
+    "name": "兰州正宗拉面",
+    "rating": 4.4,
+    "distance": 950,
+    "delivery_fee": 3,
+    "min_order": 15,
+    "delivery_time": "30-40分钟",
+    "tags": ["面食", "清真", "牛肉"],
+    "products": [
+      {
+        "id": "p014",
+        "shop_id": "shop_004",
+        "name": "兰州牛肉拉面",
+        "price": 18,
+        "description": "手工拉面，牛骨汤底，配牛肉片、萝卜、香菜",
+        "image_url": "/mock-images/lz_noodle.jpg",
+        "category": "主食",
+        "monthly_sales": 620
+      },
+      {
+        "id": "p015",
+        "shop_id": "shop_004",
+        "name": "牛肉盖浇饭",
+        "price": 22,
+        "description": "红烧牛肉浇在米饭上，配青菜",
+        "image_url": "/mock-images/beef_rice.jpg",
+        "category": "主食",
+        "monthly_sales": 310
+      },
+      {
+        "id": "p016",
+        "shop_id": "shop_004",
+        "name": "鸡蛋炒面",
+        "price": 14,
+        "description": "手工拉面炒制，配鸡蛋和时令蔬菜",
+        "image_url": "/mock-images/fried_noodle.jpg",
+        "category": "主食",
+        "monthly_sales": 245
+      },
+      {
+        "id": "p017",
+        "shop_id": "shop_004",
+        "name": "羊肉烩面",
+        "price": 24,
+        "description": "羊肉汤底，宽面条，配羊肉块和蔬菜",
+        "image_url": "/mock-images/lamb_noodle.jpg",
+        "category": "主食",
+        "monthly_sales": 180
+      }
+    ],
+    "reviews": [
+      {"id": "r010", "shop_id": "shop_004", "rating": 5, "content": "汤头很正宗，牛肉给的多", "tags": ["味道好", "份量大"]},
+      {"id": "r011", "shop_id": "shop_004", "rating": 4, "content": "面条劲道，汤底醇厚，好评", "tags": ["味道好"]},
+      {"id": "r012", "shop_id": "shop_004", "rating": 4, "content": "经常点，性价比不错", "tags": ["性价比高"]}
+    ]
+  },
+  {
+    "id": "shop_005",
+    "name": "粤式茶餐厅",
+    "rating": 4.5,
+    "distance": 1500,
+    "delivery_fee": 5,
+    "min_order": 25,
+    "delivery_time": "40-50分钟",
+    "tags": ["粤菜", "茶餐厅", "港式"],
+    "products": [
+      {
+        "id": "p018",
+        "shop_id": "shop_005",
+        "name": "叉烧饭",
+        "price": 24,
+        "description": "蜜汁叉烧配白米饭，附送例汤",
+        "image_url": "/mock-images/char_siu.jpg",
+        "category": "主食",
+        "monthly_sales": 410
+      },
+      {
+        "id": "p019",
+        "shop_id": "shop_005",
+        "name": "虾仁炒饭",
+        "price": 26,
+        "description": "鲜虾仁、鸡蛋、青豆、胡萝卜粒炒饭",
+        "image_url": "/mock-images/shrimp_rice.jpg",
+        "category": "主食",
+        "monthly_sales": 340
+      },
+      {
+        "id": "p020",
+        "shop_id": "shop_005",
+        "name": "菠萝咕咾肉",
+        "price": 28,
+        "description": "猪里脊肉裹糊炸制，配菠萝和彩椒，酸甜口",
+        "image_url": "/mock-images/sweet_sour.jpg",
+        "category": "小吃",
+        "monthly_sales": 220
+      },
+      {
+        "id": "p021",
+        "shop_id": "shop_005",
+        "name": "港式奶茶",
+        "price": 10,
+        "description": "丝袜奶茶，浓郁顺滑",
+        "image_url": "/mock-images/milk_tea.jpg",
+        "category": "饮料",
+        "monthly_sales": 560
+      }
+    ],
+    "reviews": [
+      {"id": "r013", "shop_id": "shop_005", "rating": 5, "content": "叉烧很入味，米饭粒粒分明", "tags": ["味道好"]},
+      {"id": "r014", "shop_id": "shop_005", "rating": 4, "content": "出品稳定，就是配送费有点贵", "tags": ["出品稳定", "配送费高"]},
+      {"id": "r015", "shop_id": "shop_005", "rating": 5, "content": "奶茶很正宗，回购无数次", "tags": ["味道好"]}
+    ]
+  },
+  {
+    "id": "shop_006",
+    "name": "日式便当屋",
+    "rating": 4.8,
+    "distance": 700,
+    "delivery_fee": 4,
+    "min_order": 22,
+    "delivery_time": "30-40分钟",
+    "tags": ["日料", "便当", "简餐"],
+    "products": [
+      {
+        "id": "p022",
+        "shop_id": "shop_006",
+        "name": "照烧鸡腿饭",
+        "price": 26,
+        "description": "照烧酱烤鸡腿，配米饭、沙拉和味噌汤",
+        "image_url": "/mock-images/teriyaki.jpg",
+        "category": "主食",
+        "monthly_sales": 480
+      },
+      {
+        "id": "p023",
+        "shop_id": "shop_006",
+        "name": "三文鱼刺身饭",
+        "price": 38,
+        "description": "新鲜三文鱼刺身配寿司饭，附味噌汤",
+        "image_url": "/mock-images/salmon_bowl.jpg",
+        "category": "主食",
+        "monthly_sales": 260
+      },
+      {
+        "id": "p024",
+        "shop_id": "shop_006",
+        "name": "日式咖喱鸡饭",
+        "price": 24,
+        "description": "日式咖喱酱配鸡肉块、土豆、胡萝卜，配米饭",
+        "image_url": "/mock-images/curry.jpg",
+        "category": "主食",
+        "monthly_sales": 350
+      },
+      {
+        "id": "p025",
+        "shop_id": "shop_006",
+        "name": "味噌汤",
+        "price": 6,
+        "description": "日式味噌汤，豆腐海带",
+        "image_url": "/mock-images/miso.jpg",
+        "category": "汤品",
+        "monthly_sales": 320
+      }
+    ],
+    "reviews": [
+      {"id": "r016", "shop_id": "shop_006", "rating": 5, "content": "照烧鸡腿超好吃，酱汁浓郁", "tags": ["味道好"]},
+      {"id": "r017", "shop_id": "shop_006", "rating": 5, "content": "便当包装精致，米饭软糯", "tags": ["包装好", "味道好"]},
+      {"id": "r018", "shop_id": "shop_006", "rating": 4, "content": "三文鱼很新鲜，但价格略贵", "tags": ["食材新鲜", "价格偏高"]}
+    ]
+  },
+  {
+    "id": "shop_007",
+    "name": "沙县小吃",
+    "rating": 4.1,
+    "distance": 500,
+    "delivery_fee": 2,
+    "min_order": 12,
+    "delivery_time": "20-30分钟",
+    "tags": ["快餐", "小吃", "经济"],
+    "products": [
+      {
+        "id": "p026",
+        "shop_id": "shop_007",
+        "name": "拌面",
+        "price": 8,
+        "description": "花生酱拌面，配酱油和葱花",
+        "image_url": "/mock-images/mixed_noodle.jpg",
+        "category": "主食",
+        "monthly_sales": 780
+      },
+      {
+        "id": "p027",
+        "shop_id": "shop_007",
+        "name": "蒸饺(10个)",
+        "price": 10,
+        "description": "猪肉蒸饺，皮薄馅多",
+        "image_url": "/mock-images/dumpling.jpg",
+        "category": "主食",
+        "monthly_sales": 650
+      },
+      {
+        "id": "p028",
+        "shop_id": "shop_007",
+        "name": "炖罐汤",
+        "price": 12,
+        "description": "鸡汤炖罐，配枸杞红枣",
+        "image_url": "/mock-images/stew.jpg",
+        "category": "汤品",
+        "monthly_sales": 420
+      },
+      {
+        "id": "p029",
+        "shop_id": "shop_007",
+        "name": "卤蛋",
+        "price": 3,
+        "description": "五香卤蛋",
+        "image_url": "/mock-images/egg.jpg",
+        "category": "小吃",
+        "monthly_sales": 900
+      },
+      {
+        "id": "p030",
+        "shop_id": "shop_007",
+        "name": "鸡腿饭",
+        "price": 15,
+        "description": "卤鸡腿配米饭和青菜",
+        "image_url": "/mock-images/chicken_leg.jpg",
+        "category": "主食",
+        "monthly_sales": 530
+      }
+    ],
+    "reviews": [
+      {"id": "r019", "shop_id": "shop_007", "rating": 4, "content": "便宜实惠，拌面很好吃", "tags": ["性价比高", "味道好"]},
+      {"id": "r020", "shop_id": "shop_007", "rating": 4, "content": "蒸饺皮薄馅大，配炖罐汤绝了", "tags": ["份量大"]},
+      {"id": "r021", "shop_id": "shop_007", "rating": 3, "content": "中规中矩，胜在便宜和快", "tags": ["性价比高", "配送快"]}
+    ]
+  },
+  {
+    "id": "shop_008",
+    "name": "韩式拌饭馆",
+    "rating": 4.4,
+    "distance": 1100,
+    "delivery_fee": 4,
+    "min_order": 20,
+    "delivery_time": "35-45分钟",
+    "tags": ["韩餐", "拌饭", "石锅"],
+    "products": [
+      {
+        "id": "p031",
+        "shop_id": "shop_008",
+        "name": "石锅拌饭",
+        "price": 22,
+        "description": "石锅拌饭配牛肉、鸡蛋、蔬菜、韩式辣酱",
+        "image_url": "/mock-images/bibimbap.jpg",
+        "category": "主食",
+        "monthly_sales": 380
+      },
+      {
+        "id": "p032",
+        "shop_id": "shop_008",
+        "name": "部队锅(单人份)",
+        "price": 32,
+        "description": "泡菜、午餐肉、拉面、芝士、年糕",
+        "image_url": "/mock-images/army_stew.jpg",
+        "category": "主食",
+        "monthly_sales": 210
+      },
+      {
+        "id": "p033",
+        "shop_id": "shop_008",
+        "name": "韩式炸鸡(5块)",
+        "price": 25,
+        "description": "甜辣酱裹炸鸡块，外酥里嫩",
+        "image_url": "/mock-images/fried_chicken.jpg",
+        "category": "小吃",
+        "monthly_sales": 440
+      },
+      {
+        "id": "p034",
+        "shop_id": "shop_008",
+        "name": "紫菜包饭(6个)",
+        "price": 16,
+        "description": "紫菜包饭配黄瓜、蟹棒、鸡蛋、胡萝卜",
+        "image_url": "/mock-images/kimbap.jpg",
+        "category": "主食",
+        "monthly_sales": 310
+      }
+    ],
+    "reviews": [
+      {"id": "r022", "shop_id": "shop_008", "rating": 5, "content": "石锅拌饭锅巴很脆，味道正宗", "tags": ["味道好"]},
+      {"id": "r023", "shop_id": "shop_008", "rating": 4, "content": "炸鸡不错，甜辣酱好吃", "tags": ["味道好"]},
+      {"id": "r024", "shop_id": "shop_008", "rating": 4, "content": "紫菜包饭新鲜，量也可以", "tags": ["食材新鲜"]}
+    ]
+  },
+  {
+    "id": "shop_009",
+    "name": "湘菜小厨",
+    "rating": 4.3,
+    "distance": 1300,
+    "delivery_fee": 4,
+    "min_order": 20,
+    "delivery_time": "35-45分钟",
+    "tags": ["湘菜", "辣", "家常菜"],
+    "products": [
+      {
+        "id": "p035",
+        "shop_id": "shop_009",
+        "name": "辣椒炒肉盖饭",
+        "price": 20,
+        "description": "湖南辣椒炒猪肉，配米饭",
+        "image_url": "/mock-images/pepper_pork.jpg",
+        "category": "主食",
+        "monthly_sales": 460
+      },
+      {
+        "id": "p036",
+        "shop_id": "shop_009",
+        "name": "剁椒鱼头(配米饭)",
+        "price": 35,
+        "description": "新鲜鱼头蒸制，配剁辣椒和蒜蓉，送米饭",
+        "image_url": "/mock-images/fish_head.jpg",
+        "category": "主食",
+        "monthly_sales": 180
+      },
+      {
+        "id": "p037",
+        "shop_id": "shop_009",
+        "name": "小炒黄牛肉盖饭",
+        "price": 28,
+        "description": "小炒黄牛肉配辣椒、蒜苗，配米饭",
+        "image_url": "/mock-images/beef_stir.jpg",
+        "category": "主食",
+        "monthly_sales": 320
+      },
+      {
+        "id": "p038",
+        "shop_id": "shop_009",
+        "name": "农家小炒肉盖饭",
+        "price": 18,
+        "description": "五花肉炒青辣椒，配米饭",
+        "image_url": "/mock-images/pork_stir.jpg",
+        "category": "主食",
+        "monthly_sales": 390
+      }
+    ],
+    "reviews": [
+      {"id": "r025", "shop_id": "shop_009", "rating": 5, "content": "正宗湘菜，辣得过瘾！", "tags": ["味道好", "正宗"]},
+      {"id": "r026", "shop_id": "shop_009", "rating": 4, "content": "份量足，味道很下饭", "tags": ["份量大", "味道好"]},
+      {"id": "r027", "shop_id": "shop_009", "rating": 4, "content": "小炒黄牛肉很嫩，推荐", "tags": ["味道好"]}
+    ]
+  },
+  {
+    "id": "shop_010",
+    "name": "素心斋素食",
+    "rating": 4.6,
+    "distance": 900,
+    "delivery_fee": 3,
+    "min_order": 18,
+    "delivery_time": "25-35分钟",
+    "tags": ["素食", "健康", "清淡"],
+    "products": [
+      {
+        "id": "p039",
+        "shop_id": "shop_010",
+        "name": "素三鲜盖饭",
+        "price": 18,
+        "description": "西红柿、鸡蛋、木耳炒制，配米饭",
+        "image_url": "/mock-images/veg_rice.jpg",
+        "category": "主食",
+        "monthly_sales": 280
+      },
+      {
+        "id": "p040",
+        "shop_id": "shop_010",
+        "name": "菌菇汤面",
+        "price": 16,
+        "description": "多种菌菇煮汤面，清淡鲜美",
+        "image_url": "/mock-images/mushroom_noodle.jpg",
+        "category": "主食",
+        "monthly_sales": 220
+      },
+      {
+        "id": "p041",
+        "shop_id": "shop_010",
+        "name": "时蔬豆腐煲",
+        "price": 20,
+        "description": "嫩豆腐配时令蔬菜，清汤煲制",
+        "image_url": "/mock-images/tofu_pot.jpg",
+        "category": "主食",
+        "monthly_sales": 190
+      },
+      {
+        "id": "p042",
+        "shop_id": "shop_010",
+        "name": "五谷杂粮饭",
+        "price": 5,
+        "description": "糙米、小米、红豆、薏米混合蒸制",
+        "image_url": "/mock-images/grain_rice.jpg",
+        "category": "主食",
+        "monthly_sales": 310
+      }
+    ],
+    "reviews": [
+      {"id": "r028", "shop_id": "shop_010", "rating": 5, "content": "清淡健康，素食者的福音", "tags": ["健康", "味道好"]},
+      {"id": "r029", "shop_id": "shop_010", "rating": 4, "content": "菌菇汤面很鲜，推荐", "tags": ["味道好"]},
+      {"id": "r030", "shop_id": "shop_010", "rating": 5, "content": "食材很新鲜，吃完很舒服", "tags": ["食材新鲜", "健康"]}
+    ]
+  }
+]

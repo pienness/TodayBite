@@ -1,6 +1,6 @@
 # TodayBite — 技术设计文档
 
-> 版本: v0.1 | 日期: 2026-03-24
+> 版本: v0.2 | 日期: 2026-03-24 | 状态: ✅ 技术方案已确认
 
 ---
 
@@ -16,7 +16,7 @@
 | **后端** | Next.js API Routes + Python FastAPI | 14.x / 0.110+ | 前端路由用 Next.js，AI 推荐引擎用 Python |
 | **LLM 接口** | 可插拔设计 | - | 支持 OpenAI / DeepSeek / 通义千问 / Ollama |
 | **数据库** | SQLite (better-sqlite3) | - | MVP 阶段轻量，无需额外部署 |
-| **食物营养库** | 中国食物成分表数据 | - | 内置常见食物营养数据 |
+| **食物营养库** | 中国食物成分表 + 外卖常见菜手工数据 | - | 混合方案：数据库优先，LLM 兜底 |
 | **定位** | 浏览器 Geolocation API | - | 获取经纬度 |
 | **状态管理** | Zustand | 最新 | 轻量、简洁 |
 | **包管理器** | pnpm | 最新 | 速度快、磁盘效率高 |
@@ -28,6 +28,43 @@
   - Python 的 AI/ML 生态远优于 Node.js
   - 方便后续扩展（接入食物识别、更复杂的推荐算法等）
 - 两者通过 HTTP 内部通信，Next.js 作为 BFF (Backend For Frontend) 层
+
+### 1.3 已确认的技术决策清单
+
+| # | 决策项 | 最终选择 | 备选方案（已排除） | 排除理由 |
+|---|---|---|---|---|
+| 1 | 前端框架 | **Next.js 14 (App Router)** | Vite+React / Vue+Nuxt / SvelteKit | Next.js 内置 BFF 能力，shadcn/ui 生态最好 |
+| 2 | 后端架构 | **Next.js BFF + Python FastAPI 双后端** | 纯 Next.js 全栈 / Node Express | Python AI 生态优势明显，后续扩展性强 |
+| 3 | LLM 集成策略 | **数据库优先 + 批量 JSON Mode 调用** | 逐个调用 / 纯规则 | 控制延迟在 3-5s，成本低 |
+| 4 | 热量估算 | **食物成分表精确匹配 → LLM 估算兜底** | 纯 LLM / 纯数据库 | 双重策略兼顾精度和覆盖面 |
+| 5 | 营养数据库 | **中国食物成分表 + 100-200 道外卖常见菜手工数据 (JSON)** | 爬取第三方 / 纯 LLM | 合法、可控、场景匹配 |
+| 6 | 定位方案 | **浏览器 Geolocation API (MVP)** → 后续高德地图 | IP 定位 / 腾讯地图 | MVP 零成本，Mock 数据阶段精度不重要 |
+| 7 | 数据源 | **Mock 数据 (MVP)** → 后续调研真实接入 | 爬虫 / 用户截图 | 法律合规，先验证算法价值 |
+| 8 | 部署方案 | **本地开发 (MVP)** → Vercel (后续) | Netlify / 自有服务器 | 零成本起步 |
+| 9 | LLM 提供商 | **可插拔设计**（用户后续提供 API Key） | 固定某一家 | 灵活切换，不锁定 |
+
+### 1.4 LLM 批量调用策略
+
+每次推荐请求中，LLM 调用控制在 **1-2 次**：
+
+- **第 1 次调用**：批量分析候选菜品（一次传入所有候选菜品，要求返回 JSON 数组）
+  - 输入：菜名 + 描述 + 评论摘要（仅数据库未命中的菜品）
+  - 输出：每道菜的估算热量、主要食材、营养素标签、口味标签、置信度
+- **第 2 次调用**：生成推荐方案的评论摘要 + 用餐建议
+  - 输入：选定方案的菜品信息 + 相关评论
+  - 输出：综合评论摘要 + 营养建议
+
+### 1.5 食材识别降级策略
+
+```
+食材/口味排除校验流程：
+1. 关键词规则匹配（成本=0，速度最快）
+   菜名含"猪" → 含猪肉 ✓
+   菜名含"香菜" / 描述含"芫荽" → 含香菜 ✓
+   
+2. 规则无法判断 → 纳入 LLM 批量分析（与热量估算合并调用）
+   "水煮肉片" → 规则不确定 → LLM 识别为含猪肉 ✓
+```
 
 ---
 
@@ -425,3 +462,35 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 | LLM 服务不可用 | 核心功能瘫痪 | 降级为纯规则推荐(无热量/评论摘要) |
 | Mock 数据不够真实 | MVP 演示效果差 | 参考真实外卖平台精心构造 |
 | 多店组合计算量大 | 响应超时 | 限制候选集 + 贪心算法剪枝 |
+
+---
+
+## 9. 开发环境要求
+
+| 工具 | 版本要求 |
+|---|---|
+| Node.js | >= 18.x |
+| Python | >= 3.10 |
+| pnpm | >= 8.x |
+| Git | >= 2.x |
+
+### 本地启动流程
+
+```bash
+# 1. 启动 Python 后端
+cd backend
+python -m venv .venv
+.venv/Scripts/activate      # Windows
+pip install -r requirements.txt
+cp .env.example .env         # 填入 API Key
+uvicorn app.main:app --reload --port 8000
+
+# 2. 启动 Next.js 前端（新终端）
+cd frontend
+pnpm install
+cp .env.example .env.local   # 配置后端地址
+pnpm dev
+```
+
+前端访问: http://localhost:3000
+后端 API: http://localhost:8000/docs (Swagger UI)
