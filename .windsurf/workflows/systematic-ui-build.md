@@ -85,15 +85,9 @@ If states are undefined, the task is incomplete.
 
 ## 7. Run the review checklist
 
-Before considering the task done, answer:
+Before considering the task done, run every item in **`docs/SYSTEM_BUILD_RULES.md` Section 7**.
 
-- Is the primary goal obvious within 3 seconds?
-- Is the main action singular and clear?
-- Are system tokens and components reused consistently?
-- Are recommendation reasons explicit?
-- Are mobile interactions still usable?
-- Are AI uncertainties stated where needed?
-- Did this task reveal a reusable lesson?
+Do not maintain a separate checklist here. The single source of truth is Section 7 of the rules document.
 
 ## 8. Close the feedback loop
 

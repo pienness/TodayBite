@@ -146,11 +146,10 @@ Information hierarchy is decided before color, spacing, or motion.
 
 Before implementation, map the task to existing rules:
 
-- design tokens
+- design tokens (see `docs/DESIGN_TOKENS.md`)
 - component variants
 - page sections
 - state rules
-- copy rules
 
 Rule:
 
@@ -189,7 +188,7 @@ That is mandatory.
 
 ## 5. UI System Rules
 
-## 5.1 Design tokens first
+### 5.1 Design tokens first
 
 No page or component should invent its own visual language.
 
@@ -205,11 +204,13 @@ Required token categories:
 - border
 - semantic state colors
 
+Token values are defined in `docs/DESIGN_TOKENS.md`. That document must exist before any UI implementation begins. Until it exists, treat token categories listed above as the specification to fill in first.
+
 Rule:
 
 No hardcoded “special” visual style for a single business component unless explicitly approved as a system pattern.
 
-## 5.2 Components before pages
+### 5.2 Components before pages
 
 Pages should be assembled from system components, not from one-off markup.
 
@@ -224,7 +225,7 @@ Rule:
 
 If the same pattern appears twice, it must become a component or a variant.
 
-## 5.3 States are mandatory, not optional
+### 5.3 States are mandatory, not optional
 
 Every page and component must define at least these states when applicable:
 
@@ -241,7 +242,7 @@ Rule:
 
 A component is incomplete if its interaction and failure states are undefined.
 
-## 5.4 Recommendation-first hierarchy
+### 5.4 Recommendation-first hierarchy
 
 TodayBite is a decision-assistance product.
 
@@ -257,7 +258,7 @@ Rule:
 
 If a screen looks beautiful but does not clearly answer “why this recommendation”, it fails.
 
-## 5.5 Mobile-first density
+### 5.5 Mobile-first density
 
 The default layout should assume a mobile screen first.
 
@@ -267,7 +268,7 @@ Any interaction that feels acceptable only on desktop is not finished.
 
 ## 6. Code Construction Rules
 
-## 6.1 Do not encode design decisions ad hoc
+### 6.1 Do not encode design decisions ad hoc
 
 Forbidden patterns:
 
@@ -276,7 +277,7 @@ Forbidden patterns:
 - page-specific button styles when a reusable variant is possible
 - mixing visual semantics and business logic in uncontrolled ways
 
-## 6.2 One component, one responsibility
+### 6.2 One component, one responsibility
 
 A component should have one clear purpose.
 
@@ -290,7 +291,7 @@ Rule:
 
 Do not create oversized components that both manage layout strategy and contain multiple unrelated interaction concerns.
 
-## 6.3 Business components must explain their interface
+### 6.3 Business components must explain their interface
 
 Every business component should have a stable interface with explicit props.
 
@@ -298,7 +299,7 @@ Rule:
 
 If a prop exists only to patch a one-off visual inconsistency, fix the system instead of adding the prop.
 
-## 6.4 Prefer variants over branching styles
+### 6.4 Prefer variants over branching styles
 
 When a component needs multiple appearances, define variants.
 
@@ -374,11 +375,3 @@ From this point onward:
 - reusable lessons must be documented
 - page optimization must follow component and token constraints
 - implementation is part of a loop, not a one-shot delivery
-
-## 10. Current Next Step
-
-The immediate next task after this document is:
-
-1. define TodayBite visual tokens
-2. define base component rules
-3. redesign pages using the system rather than ad hoc styling
